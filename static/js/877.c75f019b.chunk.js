@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[877],{877:(e,s,r)=>{r.r(s),r.d(s,{default:()=>o});r(791);var h=r(87),n=r(184);const o=()=>(0,n.jsxs)("div",{children:[(0,n.jsx)("h1",{children:"Error!"}),(0,n.jsx)("h3",{children:"Something went wrong..."}),(0,n.jsx)(h.rU,{className:"home-button",to:"/todo-list",children:"Go Home Page"})]})}}]);
+//# sourceMappingURL=877.c75f019b.chunk.js.map
