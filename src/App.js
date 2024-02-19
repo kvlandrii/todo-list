@@ -56,7 +56,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index path="home" element={<Home />}></Route>
+            <Route index path="todo-list" element={<Home />}></Route>
             <Route path="*" element={<Error />}></Route>
 
             <Route path="about" element={<About />}></Route>
