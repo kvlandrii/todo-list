@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "qr4d52858",
+      "login": "admin",
+      "password": "admin",
+      "todos": [
+        {
+          "id": "m8ok6m3la",
+          "title": "my first todo",
+          "description": "testing",
+          "checked": true,
+          "creationDate": "Mon, 19 Feb 2024 15:59:56 GMT"
+        }
+      ]
+    }
+  ]
+}

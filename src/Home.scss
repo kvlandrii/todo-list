@@ -1,0 +1,26 @@
+$secondary: #d5d9eb;
+$button-hover: #3d8d3a;
+$lines: #002125;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+}
+
+.start-btn {
+  text-decoration: none;
+  border: 1px solid $lines;
+  color: $lines;
+  padding: 1.5vh 3vh;
+  border-radius: 1vh;
+  background-color: $secondary;
+
+  &:hover {
+    color: $button-hover;
+  }
+}

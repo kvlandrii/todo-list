@@ -1,0 +1,59 @@
+$main: #3c3f50;
+$secondary: #d5d9eb;
+$button-hover: #5c5c5c;
+$lines: #002125;
+$completed: #70bb6d;
+$cancel: #d39b9b;
+
+p {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__input {
+    margin: 1vh 0;
+    height: 3vh;
+  }
+
+  &__checkbox-container {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      width: 3vh;
+      height: 3vh;
+      accent-color: $secondary;
+    }
+
+    span {
+      margin-left: 2vh;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form__button {
+      text-decoration: none;
+      border: 1px solid $lines;
+      padding: 0.5vh 2vh;
+      border-radius: 1vh;
+      background-color: $secondary;
+      color: $lines;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: center;
+
+      &:hover {
+        color: $button-hover;
+        cursor: pointer;
+      }
+    }
+  }
+}

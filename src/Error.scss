@@ -1,0 +1,19 @@
+$secondary: #d5d9eb;
+$button-hover: #5c5c5c;
+$lines: #002125;
+
+.home-button {
+  text-decoration: none;
+  border: 1px solid $lines;
+  padding: 0.5vh 2vh;
+  border-radius: 1vh;
+  background-color: $secondary;
+  color: $lines;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  &:hover {
+    color: $button-hover;
+    cursor: pointer;
+  }
+}
