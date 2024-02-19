@@ -29,11 +29,11 @@ const Layout = () => {
         </NavLink>
         {!isAuthenticated ? (
           <NavLink to="/login" className="header__item" style={isActiveLink}>
-            Sign In
+            Login
           </NavLink>
         ) : (
           <NavLink onClick={signOutHandler} className="header__item">
-            Sign Out
+            Exit
           </NavLink>
         )}
       </header>
