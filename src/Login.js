@@ -52,7 +52,7 @@ const Login = () => {
             localStorage.setItem("id", response.data[0].id);
             setIsAuthenticated(true);
             localStorage.setItem("isAuthenticated", true);
-            navigate("/todo-list/todo");
+            navigate("/todo");
           } else {
             setIsWrongLenght(false);
             setIsWrong(true);

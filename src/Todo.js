@@ -103,7 +103,7 @@ const Todos = () => {
   };
 
   const handleEdit = (item) => {
-    navigate(`/todo-list/edit`, { state: { todos, item } });
+    navigate(`/edit`, { state: { todos, item } });
   };
 
   return (
