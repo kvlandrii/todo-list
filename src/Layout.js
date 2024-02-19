@@ -18,7 +18,7 @@ const Layout = () => {
   return (
     <div className="layout">
       <header className="header">
-        <NavLink to="/" className="header__item" style={isActiveLink}>
+        <NavLink to="/home" className="header__item" style={isActiveLink}>
           Home
         </NavLink>
         <NavLink to="/todo" className="header__item" style={isActiveLink}>
