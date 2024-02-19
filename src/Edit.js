@@ -75,7 +75,7 @@ const Edit = () => {
         />
         <span>Completed</span>
       </div>
-      <Link to="/todo">
+      <Link to="/todo-list/todo">
         <button onClick={handleSave}>Save</button>
       </Link>
     </div>

@@ -8,7 +8,7 @@ const Home = () => {
       <h2>Hello!</h2>
       <p>Welcome to your TODO List!</p>
       <p>Here you can add, delete and edit your todos</p>
-      <NavLink to="/todo" className="start-btn">
+      <NavLink to="/todo-list/todo" className="start-btn">
         Start!
       </NavLink>
     </main>

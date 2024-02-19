@@ -18,17 +18,29 @@ const Layout = () => {
   return (
     <div className="layout">
       <header className="header">
-        <NavLink to="/" className="header__item" style={isActiveLink}>
+        <NavLink to="/todo-list/home" className="header__item" style={isActiveLink}>
           Home
         </NavLink>
-        <NavLink to="/todo" className="header__item" style={isActiveLink}>
+        <NavLink
+          to="/todo-list/todo"
+          className="header__item"
+          style={isActiveLink}
+        >
           Todo
         </NavLink>
-        <NavLink to="/about" className="header__item" style={isActiveLink}>
+        <NavLink
+          to="/todo-list/about"
+          className="header__item"
+          style={isActiveLink}
+        >
           About
         </NavLink>
         {!isAuthenticated ? (
-          <NavLink to="/login" className="header__item" style={isActiveLink}>
+          <NavLink
+            to="/todo-list/login"
+            className="header__item"
+            style={isActiveLink}
+          >
             Sign In
           </NavLink>
         ) : (
