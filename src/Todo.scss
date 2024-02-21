@@ -13,7 +13,7 @@ $cancel: #d39b9b;
     display: flex;
     flex-direction: column;
     margin: 1vh 0;
-    width: 40vw;
+    width: auto;
 
     p {
       text-align: center;
@@ -23,7 +23,7 @@ $cancel: #d39b9b;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.25rem;
+      font-size: 0.75rem;
 
       span {
         margin-left: 2vh;
@@ -32,12 +32,10 @@ $cancel: #d39b9b;
 
     &__input[type="text"] {
       margin: 1vh 0;
-      height: 3vh;
+      height: 2vh;
     }
 
     &__input[type="checkbox"] {
-      width: 3vh;
-      height: 3vh;
       accent-color: $secondary;
     }
   }
@@ -49,11 +47,11 @@ $cancel: #d39b9b;
 
     &__button {
       border: 1px solid $lines;
-      padding: 1.5vh 3vh;
+      padding: 0.75vh 1vh;
       border-radius: 1vh;
       background-color: $secondary;
       color: $lines;
-      font-size: 1.25rem;
+      font-size: 0.75rem;
       font-weight: bold;
 
       &:hover {
@@ -62,56 +60,91 @@ $cancel: #d39b9b;
       }
 
       &_close {
-        padding: 1.5vh 1vh;
+        padding: 0.75vh 1.5vh;
         background-color: $cancel;
       }
     }
   }
 }
 
-.todo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2vh 0 0 0;
-  width: 80vw;
+.todos {
+  width: fit-content;
 
-  .todo-info {
+  .todo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
 
-    p {
-      margin: 1vh 2vh;
-
-      &:hover {
-        cursor: default;
-      }
+    input[type="checkbox"] {
+      accent-color: $secondary;
     }
-  }
 
-  a,
-  button {
-    text-decoration: none;
-    border: 1px solid $lines;
-    padding: 0.5vh 2vh;
-    border-radius: 1vh;
-    background-color: $secondary;
-    color: $lines;
-    font-size: 1.25rem;
-    font-weight: bold;
+    input[type="checkbox"]:checked + p {
+      text-decoration: line-through;
+      color: $completed;
+    }
 
-    &:hover {
-      color: $button-hover;
-      cursor: pointer;
+    input[type="checkbox"]:checked
+      + p
+      + div
+      > div:first-child
+      > div:first-child {
+      text-decoration: line-through;
+      color: $completed;
+    }
+
+    .todo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .todo-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        height: auto;
+
+        &__text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        p {
+          margin: 1vh 1vh;
+          text-align: center;
+
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+
+      a,
+      button {
+        text-decoration: none;
+        border: 1px solid $lines;
+        padding: 0.5vh 1vh;
+        border-radius: 1vh;
+        background-color: $secondary;
+        color: $lines;
+        font-size: 0.75rem;
+        font-weight: bold;
+
+        &:hover {
+          color: $button-hover;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
 
-.completed {
-  height: 1px;
-  color: $completed;
-  background-color: $lines;
-  z-index: 99;
+.todo-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }

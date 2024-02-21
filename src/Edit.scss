@@ -8,25 +8,27 @@ $completed: #70bb6d;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 
   input[type="text"] {
-    margin: 1vh 0;
-    height: 3vh;
+    margin: 0.5vh 0;
+    height: 1.5vh;
   }
 
   input[type="checkbox"] {
-    width: 3vh;
-    height: 3vh;
+    width: 1.5vh;
+    height: 1.5vh;
     accent-color: $secondary;
   }
 
   button {
     border: 1px solid $lines;
-    padding: 1vh 2vh;
+    padding: 0.5vh 1vh;
     border-radius: 1vh;
     background-color: $secondary;
     color: $lines;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     font-weight: bold;
 
     &:hover {
@@ -39,9 +41,10 @@ $completed: #70bb6d;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1vh;
 
     span {
-      margin-right: 2vh;
+      margin-right: 1vh;
     }
   }
 }

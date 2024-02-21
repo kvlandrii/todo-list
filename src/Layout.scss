@@ -8,7 +8,7 @@ html {
   height: 100%;
 
   background-color: $color_1;
-  font-size: 2vh;
+  font-size: 16px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -39,7 +39,7 @@ html {
     text-decoration: none;
     margin: 0 5vw;
     color: $color_2;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
 }
 

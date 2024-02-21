@@ -124,7 +124,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="login">
       {isWrongLenght && <p>Wrong length of login or password</p>}
       {isWrong && <p>Wrong login or password</p>}
       {isSignUpSuccessful && <p>Sign Up Successful</p>}
@@ -169,7 +169,7 @@ const Login = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

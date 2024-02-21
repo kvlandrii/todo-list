@@ -27,7 +27,7 @@ const Todos = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [addedTodos, id]);
+  }, [addedTodos, id, url]);
 
   const addTodoHandler = () => {
     setIsWrongLength(false);
@@ -106,6 +106,29 @@ const Todos = () => {
     navigate(`/edit`, { state: { todos, item } });
   };
 
+  const toggleComplete = (itemId) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === itemId) {
+        return {
+          ...todo,
+          checked: !todo.checked,
+        };
+      }
+      return todo;
+    });
+
+    axios
+      .patch(url + `/${id}`, {
+        todos: updatedTodos,
+      })
+      .then(() => {
+        setTodos(updatedTodos);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <>
       <div className="add-todo-container">
@@ -154,19 +177,32 @@ const Todos = () => {
           )}
         </div>
       </div>
-
-      {todos.map((item, index) => (
-        <div key={item.id} className="todo-container">
-          <div className={`todo-info ${item.checked ? `completed` : ``}`}>
+      <div className="todos">
+        {todos.map((item, index) => (
+          <div className="todo">
+            <input
+              type="checkbox"
+              checked={item.checked}
+              onChange={() => toggleComplete(item.id)}
+            />
             <p>{index + 1}</p>
-            <p>{item.title}</p>
-            <p>{item.description}</p>
+            <div key={item.id} className="todo-container">
+              <div className="todo-info">
+                <div className="todo-info__text">
+                  <p>{item.title}</p>
+                  <p>{item.description}</p>
+                </div>
+                <div className="todo-buttons">
+                  <button onClick={() => handleEdit(item)}>Edit</button>
+                  <button onClick={() => handleDelete(item, index)}>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <button onClick={() => handleEdit(item)}>Edit</button>
-          <button onClick={() => handleDelete(item, index)}>Delete</button>
-        </div>
-      ))}
+        ))}
+      </div>
       {!todos.length && <p>There are no todos yet</p>}
     </>
   );
