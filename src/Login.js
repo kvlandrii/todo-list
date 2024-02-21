@@ -162,10 +162,10 @@ const Login = () => {
         </div>
         <div className="form__button-container">
           <button onClick={signInHandler} className="form__button">
-            Sign In
+            Login
           </button>
           <button onClick={signUpHandler} className="form__button">
-            Sign Up
+            Register
           </button>
         </div>
       </div>
