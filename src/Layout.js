@@ -41,7 +41,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer className="footer">
-        <div>Your TODO List!</div>
+        <div style={{ textAlign: "center" }}>Your TODO List!</div>
       </footer>
     </div>
   );
