@@ -9,17 +9,16 @@ $completed: #70bb6d;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 
-  input[type="text"] {
-    margin: 0.5vh 0;
-    height: 1.5vh;
-  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
 
-  input[type="checkbox"] {
-    width: 1.5vh;
-    height: 1.5vh;
-    accent-color: $secondary;
+    input[type="checkbox"] {
+      accent-color: $secondary;
+    }
   }
 
   button {
@@ -29,22 +28,10 @@ $completed: #70bb6d;
     background-color: $secondary;
     color: $lines;
     font-size: 0.75rem;
-    font-weight: bold;
 
     &:hover {
       color: $button-hover;
       cursor: pointer;
-    }
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1vh;
-
-    span {
-      margin-right: 1vh;
     }
   }
 }

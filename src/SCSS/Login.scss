@@ -1,26 +1,17 @@
-$main: #3c3f50;
 $secondary: #d5d9eb;
 $button-hover: #5c5c5c;
 $lines: #002125;
-$completed: #70bb6d;
-$cancel: #d39b9b;
+
+p {
+  text-align: center;
+  font-size: 0.75rem;
+}
 
 .login {
-  p {
-    width: 80vw;
-    text-align: center;
-    font-size: 0.75rem;
-  }
-
   .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    &__input {
-      margin: 1vh 0;
-      height: 2vh;
-    }
 
     &__checkbox-container {
       display: flex;
@@ -31,7 +22,7 @@ $cancel: #d39b9b;
       }
 
       span {
-        margin-left: 2vh;
+        margin-left: 1vh;
         font-size: 0.75rem;
       }
     }

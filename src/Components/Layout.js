@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { LoginContext } from "./LoginContext.js";
-import "./Layout.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsAuthenticated } from "../store/slices/userSlise.js";
+import "../SCSS/Layout.scss";
 
 const Layout = () => {
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+
   const isActiveLink = ({ isActive }) => {
     return { color: isActive ? "#70bb6d" : "#d5d9eb" };
   };
 
-  const { isAuthenticated, setIsAuthenticated } = useContext(LoginContext);
-
   const signOutHandler = () => {
-    setIsAuthenticated(false);
+    dispatch(setIsAuthenticated(false));
     localStorage.setItem("isAuthenticated", false);
   };
 

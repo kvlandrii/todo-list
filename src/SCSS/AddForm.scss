@@ -1,0 +1,62 @@
+$secondary: #d5d9eb;
+$lines: #002125;
+$button-hover: #5c5c5c;
+$cancel: #d39b9b;
+
+p {
+  text-align: center;
+}
+
+.add-todo-container {
+  display: flex;
+  flex-direction: column;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 0;
+    width: auto;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1vh;
+
+      &__input[type="checkbox"] {
+        accent-color: $secondary;
+      }
+      
+      span {
+        margin-right: 1vh;
+      }
+    }
+
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+      border: 1px solid $lines;
+      padding: 0.75vh 1vh;
+      border-radius: 1vh;
+      background-color: $secondary;
+      color: $lines;
+      font-size: 0.75rem;
+      font-weight: bold;
+
+      &:hover {
+        color: $button-hover;
+        cursor: pointer;
+      }
+
+      &_close {
+        padding: 0.75vh 1.5vh;
+        background-color: $cancel;
+      }
+    }
+  }
+}

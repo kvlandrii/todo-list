@@ -1,4 +1,3 @@
-import React from "react";
 import { Hourglass } from "react-loader-spinner";
 
 const Loading = () => {

@@ -1,0 +1,86 @@
+$secondary: #d5d9eb;
+$completed: #70bb6d;
+$lines: #002125;
+$button-hover: #5c5c5c;
+
+.todos {
+  width: fit-content;
+
+  .todo {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      accent-color: $secondary;
+    }
+
+    input[type="checkbox"]:checked + p {
+      text-decoration: line-through;
+      color: $completed;
+    }
+
+    input[type="checkbox"]:checked
+      + p
+      + div
+      > div:first-child
+      > div:first-child {
+      text-decoration: line-through;
+      color: $completed;
+    }
+
+    .todo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .todo-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        height: auto;
+
+        &__text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          p {
+            margin: 1vh 1vh;
+            text-align: center;
+
+            &:hover {
+              cursor: default;
+            }
+          }
+        }
+
+        .todo-buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+
+          a,
+          button {
+            text-decoration: none;
+            border: 1px solid $lines;
+            padding: 0.5vh 1vh;
+            border-radius: 1vh;
+            background-color: $secondary;
+            color: $lines;
+            font-size: 0.75rem;
+            font-weight: bold;
+
+            &:hover {
+              color: $button-hover;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

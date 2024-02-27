@@ -1,0 +1,29 @@
+$secondary: #d5d9eb;
+$button-hover: #3d8d3a;
+$lines: #002125;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    text-decoration: none;
+    border: 1px solid $lines;
+    color: $lines;
+    padding: 1vh 1.5vh;
+    border-radius: 1vh;
+    background-color: $secondary;
+    font-size: 1rem;
+
+    &:hover {
+      color: $button-hover;
+    }
+  }
+}

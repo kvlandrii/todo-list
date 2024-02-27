@@ -1,5 +1,4 @@
-import React from "react";
-import "./About.scss";
+import "../SCSS/About.scss";
 
 const About = () => {
   return (
@@ -16,6 +15,8 @@ const About = () => {
       </ul>
       <p>Libraries:</p>
       <ul>
+        <li>react-redux</li>
+        <li>reduxjs/toolkit</li>
         <li>react-router-dom</li>
         <li>json-server</li>
         <li>axios</li>
