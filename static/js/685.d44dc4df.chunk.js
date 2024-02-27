@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[685],{685:(e,s,a)=>{a.r(s),a.d(s,{default:()=>l});var t=a(87),d=a(184);const l=()=>(0,d.jsxs)("main",{className:"home",children:[(0,d.jsx)("h2",{children:"Hello!"}),(0,d.jsx)("p",{children:"Welcome to your TODO List!"}),(0,d.jsx)("p",{children:"Here you can add, delete and edit your todos"}),(0,d.jsx)(t.OL,{to:"/todo",className:"start-btn",children:"Start!"})]})}}]);
+//# sourceMappingURL=685.d44dc4df.chunk.js.map
